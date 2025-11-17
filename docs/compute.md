@@ -18,8 +18,3 @@ Tổng hợp các câu lệnh quan trọng của dịch vụ Compute (Nova) dùn
 
 ---
 
-# ## Instance Commands
-
-### ▶ Xem danh sách instance
-```bash
-openstack server list
