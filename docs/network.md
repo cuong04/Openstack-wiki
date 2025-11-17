@@ -6,45 +6,21 @@
 openstack network list
 ```
 
-## ▶ Tạo network mới
-```bash
-openstack network create private
-```
-
 ## ▶ Xem danh sách subnet
 ```bash
 openstack subnet list
 ```
 
-## ▶ Tạo subnet
+## ▶ Liệt kê các cổng mạng (ports) trong OpenStack Network (Neutron)
 ```bash
-openstack subnet create \
-  --network private \
-  --subnet-range 192.168.1.0/24 \
-  private-subnet
+openstack port list --fixed-ip ip-address=10.225.128.138 --long
 ```
-
 ## ▶ Xem danh sách router
 ```bash
 openstack router list
 ```
 
-## ▶ Tạo router
+## ▶ Lấy ip public cho VPC
 ```bash
-openstack router create router1
-```
-
-## ▶ Thêm router vào external network
-```bash
-openstack router set router1 --external-gateway public
-```
-
-## ▶ Gắn router với subnet
-```bash
-openstack router add subnet router1 private-subnet
-```
-
-## ▶ Xóa router
-```bash
-openstack router delete router1
+openstack floating ip create --subnet sub-provider-net11 --floating-ip-address 192.223.15.x --project <project> provider-net11
 ```
