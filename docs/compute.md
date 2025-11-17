@@ -12,7 +12,7 @@ openstack server show <instance>
 
 ---
 
-# ## Flavor Commands
+## Flavor Commands
 
 ## ▶ List flavor
 ```bash
