@@ -1,4 +1,4 @@
-## OpenStack Compute (Nova) – Commands
+## #OpenStack Compute (Nova) – Commands
 
 ## ▶ Xem danh sách instance
 ```bash
@@ -12,7 +12,7 @@ openstack server show <instance>
 
 ---
 
-## Flavor Commands
+## #Flavor Commands
 
 ## ▶ List flavor
 ```bash
