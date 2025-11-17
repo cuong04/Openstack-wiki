@@ -3,18 +3,6 @@
 
 Glance quản lý Image dùng để tạo VM: upload, list, delete, chia sẻ image, và kiểm tra format.
 
----
-
-# 📁 Mục lục
-- [Image Listing](#image-listing)
-- [Image Upload](#image-upload)
-- [Image Properties](#image-properties)
-- [Image Sharing](#image-sharing)
-- [Image Delete](#image-delete)
-- [Image Troubleshooting](#image-troubleshooting)
-
----
-
 # ## Image Listing
 
 ### ▶ Danh sách image
@@ -66,7 +54,7 @@ openstack image create \
 
 ### ▶ Xem tất cả properties của image
 ```bash
-openstack image show <image> -f json
+openstack image show <image> 
 ```
 
 ### ▶ Thêm custom property
@@ -100,6 +88,8 @@ openstack image set --enable <image>
 ### ▶ Share image cho project khác
 ```bash
 openstack image add project <image-id> <project-id>
+
+openstack image set --accept --project <ID_Project> <Image_ID>
 ```
 
 ### ▶ Cho phép project accept share
@@ -125,27 +115,8 @@ openstack image delete <image>
 
 # ## Image Troubleshooting
 
-### ▶ Kiểm tra image đã ACTIVE chưa
+### ▶ Kiểm tra image
 ```bash
-openstack image list --property status=active
+openstack image list 
 ```
 
-### ▶ Kiểm tra log của dịch vụ Glance API
-```bash
-journalctl -u openstack-glance-api -f
-```
-
-### ▶ Xem dung lượng image trong Glance store
-```bash
-openstack image show <image> | grep size
-```
-
-### ▶ Kiểm tra backend đang dùng (file, rbd, swift…)
-```bash
-grep -E "store|stores" /etc/glance/glance-api.conf
-```
-
----
-
-> Nếu bạn muốn thêm phần **Glance backend (file/RBD/Swift)**, **multi-store**, **tối ưu hóa image**, hoặc **tạo image chuẩn Windows**, chỉ cần nói:  
-> 👉 “Làm thêm phần nâng cao Glance”.
