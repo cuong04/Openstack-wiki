@@ -96,36 +96,7 @@ openstack token issue
 openstack token issue --debug
 ```
 
----
 
-# ## Domain Commands
 
-### ▶ Danh sách domain
-```bash
-openstack domain list
-```
 
-### ▶ Tạo domain
-```bash
-openstack domain create <domain-name>
-```
 
-### ▶ Xóa domain
-```bash
-openstack domain delete <domain-name>
-```
-
----
-
-> Nếu bạn muốn mình viết thêm:  
-> ✔ Federation / SSO  
-> ✔ LDAP backend  
-> ✔ Password policy  
-> ✔ Service / Endpoint Commands  
-
-Chỉ cần nói: **“Làm thêm phần Keystone nâng cao”** nhé!
-
-## ▶ Disable ( enabale ) vpc
-```bash
-openstack project set --disable ( enable) <project_id_or_name>
-```
