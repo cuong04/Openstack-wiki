@@ -11,7 +11,7 @@ openstack network list
 openstack subnet list
 ```
 
-## ▶ Liệt kê các cổng mạng (ports) trong OpenStack Network (Neutron)
+## ▶ Liệt kê các ports trong OpenStack Network
 ```bash
 openstack port list --fixed-ip ip-address=10.225.128.138 --long
 ```
