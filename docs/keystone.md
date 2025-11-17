@@ -48,9 +48,9 @@ openstack project list
 openstack project create <project-name>
 ```
 
-### ▶ Set mô tả cho project
+### ▶ Disable ( enable) project 
 ```bash
-openstack project set --description "Test Project" <project-name>
+openstack project set --disable ( enable ) <project-name>
 ```
 
 ### ▶ Xóa project
