@@ -1,4 +1,4 @@
-# 🖥️ OpenStack Compute (Nova) – Commands
+## OpenStack Compute (Nova) – Commands
 
 ## ▶ Xem danh sách instance
 ```bash
